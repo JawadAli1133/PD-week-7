@@ -22,16 +22,19 @@ main()
             untreatedP = untreatedP+(numP-doctor);
             treatedP = treatedP+doctor;
           }
-          else
+          if(numP<=doctor)
           {
              treatedP = treatedP+numP;
           }
-          if(i%3==0)
-          {         
-            if(untreatedP>treatedP)  
-            {
-              doctor=doctor+1;
-            }  
+          for(int k=1;k<=i;k++)
+          { 
+             if(k%2==0)
+             {
+               if(untreatedP>treatedP)
+               {         
+               doctor=doctor+1;
+               }   
+             }
           }
       }
       cout<<"Treated: "<<treatedP<<endl;
